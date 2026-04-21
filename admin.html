@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>管理员登录</title>
+    <style>
+        body{max-width:400px;margin:50px auto;padding:0 20px}
+        input,button{width:100%;padding:10px;margin:5px 0}
+    </style>
+</head>
+<body>
+    <h2>管理员登录</h2>
+    <input type="password" id="pwd" placeholder="输入密码">
+    <button onclick="login()">登录</button>
+
+    <script>
+        const MY_PASSWORD = "123456"; // 你可以改密码
+        function login(){
+            let p = document.getElementById("pwd").value;
+            if(p === MY_PASSWORD){
+                alert("登录成功！你可以去Gitee上传新作品");
+                location.href = "https://gitee.com/";
+            }else{
+                alert("密码错误");
+            }
+        }
+    </script>
+</body>

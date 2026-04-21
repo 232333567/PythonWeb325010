@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的编程作品主页</title>
+    <style>
+        body{max-width:800px;margin:30px auto;padding:0 20px;font-family:Arial}
+        .item{padding:10px;border-bottom:1px solid #eee}
+        a{color:#007bff;text-decoration:none}
+        .admin{margin-top:30px}
+    </style>
+</head>
+<body>
+    <h1>我的编程作品</h1>
+    <div id="list"></div>
+    <div class="admin">
+        <a href="admin.html">管理员上传入口</a>
+    </div>
+
+    <script>
+        const files = [
+            "余弦定理.py",
+            "类的学习.py",
+            "跨文件调用.py"
+        ];
+        let list = document.getElementById("list");
+        files.forEach(f => {
+            let div = document.createElement("div");
+            div.className = "item";
+            div.innerHTML = `<a href="files/${f}" target="_blank">${f}</a>`;
+            list.appendChild(div);
+        });
+    </script>
+</body>
+</html>
